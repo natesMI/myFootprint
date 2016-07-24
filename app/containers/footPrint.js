@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Actions from 'react-native-router-flux';
 
 import {
 	View,
 	Text,
 	StyleSheet,
-	Navigator
+	Navigator,
+	TouchableHighlight
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -20,8 +22,11 @@ const styles = StyleSheet.create({
 class Footprint extends React.Component{
 	render(){
 		return (
-        <View>
+        <View style={styles.container}>
           <Text>Footprint is rendering also</Text>
+				  <TouchableHighlight onPress={() => { Actions.landing() }}>
+				    <Text>Landing</Text>
+				  </TouchableHighlight>
         </View>
 			);
 	}
