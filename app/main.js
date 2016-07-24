@@ -6,7 +6,8 @@ import configureStore from './state/configureStore';
 
 import {
 	View,
-	Text
+	Text,
+	TabBarIOS
 } from 'react-native';
 
 import {
