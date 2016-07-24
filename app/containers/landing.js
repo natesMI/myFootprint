@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import {
 	View,
 	Text,
-	StyleSheet
+	StyleSheet,
+	Navigator
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -11,19 +12,18 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#27AE60',
+    backgroundColor: '#3498DB',
   },
 });
 
-
-class Main extends React.Component{
+class Landing extends React.Component{
 	render(){
 		return (
-        <View style={styles.container} >
-          <Text>Testing the router</Text>
+        <View>
+          <Text>Landing is rendering</Text>
         </View>
 			);
 	}
 }
 
-export default Main;
+export default Landing;
