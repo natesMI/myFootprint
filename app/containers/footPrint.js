@@ -28,6 +28,8 @@ class Footprint extends React.Component{
 }
 
 const mapStateToProps = state => ({
+	id: state.footprint.id,
+	name: state.footprint.name,
 	mapData: state.footprint.mapData,
 });
 

@@ -1,14 +1,19 @@
 import { AUTHORIZE_USER } from '../constants/actions';
 
-export default function (state = {}, action) {
+const INITIAL_STATE = {
+	username: null,
+	name: null,
+	email: null,
+};
+
+export default function (state = INITIAL_STATE, action) {
 	switch (action.type) {
-	case GET_USER_INFO:
+	case AUTHORIZE_USER:
 		return {
 			...state,
-			id: action.payload.id,
+			username: action.payload.username,
 			name: action.payload.name,
 			email: action.payload.email,
-			iceboxID: action.payload.iceboxID,
 		};
 	default:
 		return state;

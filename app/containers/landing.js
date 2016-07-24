@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import {
 	View,
@@ -25,5 +26,13 @@ class Landing extends React.Component{
 			);
 	}
 }
+
+const mapStateToProps = state => ({
+	username: state.landing.username,
+	name: state.landing.name,
+	email: state.landing.email,
+});
+
+export default connect(mapStateToProps)(Landing);
 
 export default Landing;
