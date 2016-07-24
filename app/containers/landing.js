@@ -32,14 +32,12 @@ class Landing extends React.Component{
 	}
 }
 
-// const mapStateToProps = state => ({
-// 	username: state.landing.username,
-// 	name: state.landing.name,
-// 	email: state.landing.email,
-// });
+const mapStateToProps = state => ({
+	username: state.landing.username,
+	name: state.landing.name,
+	email: state.landing.email,
+});
 
-// export default connect(mapStateToProps)(Landing);
+export default connect(mapStateToProps)(Landing);
 
-export default Landing;
 
-export default Landing;
