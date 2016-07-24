@@ -1,34 +1,22 @@
 import React, { Component } from 'react';
 import Footprint from './containers/footPrint';
 import Landing from './containers/landing';
+import { Provider } from 'react-redux';
+import configureStore from './state/configureStore';
 
 import {
 	View,
-	Text,
-	StyleSheet,
-	Navigator
+	Text
 } from 'react-native';
 
 import {
 	Scene,
 	Reducer,
-	Router,
+	Router
 } from 'react-native-router-flux';
 
-import { Provider } from 'react-redux';
-import configureStore from './state/configureStore';
 
 const store = configureStore();
-
-const styles = StyleSheet.create({
-	container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#27AE60',
-  },
-});
-
 
 class Main extends React.Component{
 	render(){
