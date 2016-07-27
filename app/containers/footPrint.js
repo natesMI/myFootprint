@@ -17,42 +17,59 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#27AE60',
+    //backgroundColor: '#27AE60',
   },
   navbar: {
   	flex: 1,
-  	backgroundColor: 'white',
   },
 });
 
 class Footprint extends React.Component{
+
+  constructor(props){
+  	super(props);
+  	this.state = {
+  		selectedTab: 'footprint',
+  	};
+  }
+
 	render(){
 		return (
-        <View style={styles.container}>
-          <Text>Footprint is rendering also</Text>
-          
-				  <TouchableHighlight onPress={() => { Actions.landing() }}>
-				    <Text>Landing</Text>
-				  </TouchableHighlight>
+	  	<TabBarIOS 
+      	selectedTab={this.state.selectedTab}
+      >
+      	<TabBarIOS.Item 
+      	  selected={this.state.selectedTab === 'footprint'} 
+      	  title="Footprint" 
+      	  onPress={() => {this.setState({selectedTab: 'footprint'})}}
+      	  systemIcon="bookmarks"
+      	>
+      	<View>
+      	  <Text>Alright its footprint</Text>
+      	</View>
+      	</TabBarIOS.Item>
+      	<TabBarIOS.Item
+      	  selected={this.state.selectedTab === 'dashboard'} 
+      	  title="Dashboard" 
+      	  onPress={() => {this.setState({selectedTab: 'dashboard'})}}
+      	  systemIcon="favorites"
+      	>
+      	<View>
+      	  <Text>Alright its dashboard</Text>
+      	</View>
 
-				  <View style={styles.navbar}>
-				  	<TabBarIOS 
-				   		unselectedTintColor="grey"
-		      		tintColor="black"
-		        	barTintColor="white"
-		        >
-            	<TabBarIOS.Item title="Footprint">
-            		<Icon name="language"/>
-            	</TabBarIOS.Item>
-            	<TabBarIOS.Item title="Dashboard">
-            		<Icon name="gps-fixed"/>
-            	</TabBarIOS.Item>
-            	<TabBarIOS.Item title="Settings">
-            		<Icon name="flag"/>
-            	</TabBarIOS.Item>
-				  	</TabBarIOS>
-				  </View>
-        </View>
+      	</TabBarIOS.Item>
+      	<TabBarIOS.Item
+      	  selected={this.state.selectedTab === 'settings'} 
+      	  title="Settings" 
+      	  onPress={() => {this.setState({selectedTab: 'settings'})}}
+      	  systemIcon="contacts"
+      	>
+      	<View>
+      	  <Text>Alright its settings</Text>
+      	</View>
+      	</TabBarIOS.Item>
+	  	</TabBarIOS>
 			);
 	}
 }
