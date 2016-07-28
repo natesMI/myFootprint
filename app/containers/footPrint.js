@@ -46,8 +46,9 @@ class Footprint extends React.Component{
       	>
       	<View>
       	  <MapView
-            style={{height: 200, margin: 40}}
+            style={{height: 500, margin: 30}}
             showsUserLocation={true}
+            followUserLocation={true}
           />
       	</View>
       	</TabBarIOS.Item>
