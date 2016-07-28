@@ -8,7 +8,8 @@ import {
 	StyleSheet,
 	Navigator,
 	TouchableHighlight,
-	TabBarIOS
+	TabBarIOS,
+  MapView
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -44,7 +45,10 @@ class Footprint extends React.Component{
       	  systemIcon="bookmarks"
       	>
       	<View>
-      	  <Text>Alright its footprint</Text>
+      	  <MapView
+            style={{height: 200, margin: 40}}
+            showsUserLocation={true}
+          />
       	</View>
       	</TabBarIOS.Item>
       	<TabBarIOS.Item
