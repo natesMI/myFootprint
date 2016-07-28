@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Actions from 'react-native-router-flux';
-import { Icon } from 'react-native-material-design';
 
 import {
 	View,
