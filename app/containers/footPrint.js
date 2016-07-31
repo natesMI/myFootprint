@@ -13,14 +13,23 @@ import {
 } from 'react-native';
 
 const styles = StyleSheet.create({
-	container: {
+  discover: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    //backgroundColor: '#27AE60',
+    backgroundColor: '#27AE60',
   },
-  navbar: {
-  	flex: 1,
+  social: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#C0392B',
+  },
+  settings: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#2C3E50',
   },
 });
 
@@ -53,26 +62,36 @@ class Footprint extends React.Component{
           />
       	</TabBarIOS.Item>
       	<TabBarIOS.Item
-      	  selected={this.state.selectedTab === 'dashboard'} 
-      	  title="Dashboard" 
-      	  onPress={() => {this.setState({selectedTab: 'dashboard'})}}
+      	  selected={this.state.selectedTab === 'discover'} 
+      	  title="Discover" 
+      	  onPress={() => {this.setState({selectedTab: 'discover'})}}
       	  systemIcon="favorites"
       	>
-      	<View>
-      	  <Text>Alright its dashboard</Text>
+      	<View style={styles.discover}>
+      	  <Text>DISCOVER</Text>
       	</View>
 
       	</TabBarIOS.Item>
       	<TabBarIOS.Item
-      	  selected={this.state.selectedTab === 'settings'} 
-      	  title="Settings" 
-      	  onPress={() => {this.setState({selectedTab: 'settings'})}}
+      	  selected={this.state.selectedTab === 'social'} 
+      	  title="Social" 
+      	  onPress={() => {this.setState({selectedTab: 'social'})}}
       	  systemIcon="contacts"
       	>
-      	<View>
-      	  <Text>Alright its settings</Text>
+      	<View style={styles.social}>
+      	  <Text>SOCIAL</Text>
       	</View>
       	</TabBarIOS.Item>
+        <TabBarIOS.Item
+          selected={this.state.selectedTab === 'settings'}
+          title="Settings"
+          onPress={() => {this.setState({selectedTab: 'settings'})}}
+          systemIcon="recents"
+        >
+          <View style={styles.settings}>
+            <Text>SETTINGS</Text>
+          </View>
+        </TabBarIOS.Item>
 	  	</TabBarIOS>
 			);
 	}
