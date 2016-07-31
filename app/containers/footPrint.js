@@ -44,13 +44,13 @@ class Footprint extends React.Component{
       	  onPress={() => {this.setState({selectedTab: 'footprint'})}}
       	  systemIcon="bookmarks"
       	>
-      	<View>
       	  <MapView
-            style={{height: 500, margin: 30}}
+            style={{flex: 1}}
+            maxDelta={1}
             showsUserLocation={true}
             followUserLocation={true}
+            region={{latitude: 37.774088, longitude:  -122.437642, latitudeDelta: .2, longitudeDelta: .2}}
           />
-      	</View>
       	</TabBarIOS.Item>
       	<TabBarIOS.Item
       	  selected={this.state.selectedTab === 'dashboard'} 
