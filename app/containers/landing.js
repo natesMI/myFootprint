@@ -24,7 +24,7 @@ class Landing extends React.Component{
 		return (
         <View style={styles.container} >
           <Text>Landing is rendering</Text>
-          <TouchableHighlight onPress={() => { Actions.footprint() }}>
+          <TouchableHighlight onPress={() => { Actions.shell() }}>
 				    <Text>Click here to sign-in</Text>
 				  </TouchableHighlight>
         </View>

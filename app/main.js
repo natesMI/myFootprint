@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Footprint from './containers/footPrint';
 import Landing from './containers/landing';
+import Shell from './components/shell';
 import { Provider } from 'react-redux';
 import configureStore from './state/configureStore';
 
@@ -25,8 +25,8 @@ class Main extends React.Component{
         <Provider store={store}>
           <Router>
             <Scene key="root">
-              <Scene key="landing" component={Landing} title="Landing"/>
-              <Scene key="footprint" component={Footprint} title="Footprint" rightTitle={'Logout'} onRight={()=>{console.log('Its working');}}/>
+              <Scene key="landing" component={Landing} title="Footprint"/>
+              <Scene key="shell" component={Shell} title="Footprint" rightTitle={'Logout'} onRight={()=>{console.log('Its working');}}/>
             </Scene>
           </Router>
         </Provider>
