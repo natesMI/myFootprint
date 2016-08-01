@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Actions from 'react-native-router-flux';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 import {
 	View,
@@ -47,11 +48,12 @@ class Footprint extends React.Component{
 	  	<TabBarIOS 
       	selectedTab={this.state.selectedTab}
       >
-      	<TabBarIOS.Item 
+      	<Icon.TabBarItemIOS
+          iconName="map"
+          iconSize={25}
       	  selected={this.state.selectedTab === 'footprint'} 
       	  title="Footprint" 
       	  onPress={() => {this.setState({selectedTab: 'footprint'})}}
-      	  systemIcon="bookmarks"
       	>
       	  <MapView
             style={{flex: 1}}
@@ -60,38 +62,42 @@ class Footprint extends React.Component{
             followUserLocation={true}
             region={{latitude: 37.774088, longitude:  -122.437642, latitudeDelta: .2, longitudeDelta: .2}}
           />
-      	</TabBarIOS.Item>
-      	<TabBarIOS.Item
+      	</Icon.TabBarItemIOS>
+      	<Icon.TabBarItemIOS
+          iconName="compass"
+          iconSize={25}
       	  selected={this.state.selectedTab === 'discover'} 
       	  title="Discover" 
       	  onPress={() => {this.setState({selectedTab: 'discover'})}}
-      	  systemIcon="favorites"
+          badge={3}
       	>
       	<View style={styles.discover}>
       	  <Text>DISCOVER</Text>
       	</View>
 
-      	</TabBarIOS.Item>
-      	<TabBarIOS.Item
+      	</Icon.TabBarItemIOS>
+      	<Icon.TabBarItemIOS
+          iconName="commenting"
+          iconSize={25}
       	  selected={this.state.selectedTab === 'social'} 
       	  title="Social" 
       	  onPress={() => {this.setState({selectedTab: 'social'})}}
-      	  systemIcon="contacts"
       	>
       	<View style={styles.social}>
       	  <Text>SOCIAL</Text>
       	</View>
-      	</TabBarIOS.Item>
-        <TabBarIOS.Item
+      	</Icon.TabBarItemIOS>
+        <Icon.TabBarItemIOS
+          iconName="gear"
+          iconSize={25}
           selected={this.state.selectedTab === 'settings'}
           title="Settings"
           onPress={() => {this.setState({selectedTab: 'settings'})}}
-          systemIcon="recents"
         >
           <View style={styles.settings}>
             <Text>SETTINGS</Text>
           </View>
-        </TabBarIOS.Item>
+        </Icon.TabBarItemIOS>
 	  	</TabBarIOS>
 			);
 	}
