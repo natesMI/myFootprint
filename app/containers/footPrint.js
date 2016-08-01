@@ -49,15 +49,14 @@ class Footprint extends React.Component{
       	selectedTab={this.state.selectedTab}
       >
       	<Icon.TabBarItemIOS
-          iconName="map"
-          iconSize={25}
+          iconName="paw"
+          iconSize={22}
       	  selected={this.state.selectedTab === 'footprint'} 
       	  title="Footprint" 
       	  onPress={() => {this.setState({selectedTab: 'footprint'})}}
       	>
       	  <MapView
             style={{flex: 1}}
-            maxDelta={1}
             showsUserLocation={true}
             followUserLocation={true}
             region={{latitude: 37.774088, longitude:  -122.437642, latitudeDelta: .2, longitudeDelta: .2}}
@@ -65,7 +64,7 @@ class Footprint extends React.Component{
       	</Icon.TabBarItemIOS>
       	<Icon.TabBarItemIOS
           iconName="compass"
-          iconSize={25}
+          iconSize={22}
       	  selected={this.state.selectedTab === 'discover'} 
       	  title="Discover" 
       	  onPress={() => {this.setState({selectedTab: 'discover'})}}
@@ -78,7 +77,7 @@ class Footprint extends React.Component{
       	</Icon.TabBarItemIOS>
       	<Icon.TabBarItemIOS
           iconName="commenting"
-          iconSize={25}
+          iconSize={22}
       	  selected={this.state.selectedTab === 'social'} 
       	  title="Social" 
       	  onPress={() => {this.setState({selectedTab: 'social'})}}
@@ -89,7 +88,7 @@ class Footprint extends React.Component{
       	</Icon.TabBarItemIOS>
         <Icon.TabBarItemIOS
           iconName="gear"
-          iconSize={25}
+          iconSize={22}
           selected={this.state.selectedTab === 'settings'}
           title="Settings"
           onPress={() => {this.setState({selectedTab: 'settings'})}}
