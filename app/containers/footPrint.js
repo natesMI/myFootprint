@@ -10,7 +10,7 @@ import {
 	Navigator,
 	TouchableHighlight,
 	TabBarIOS,
-  MapView
+  MapView,
 } from 'react-native';
 
 const styles = StyleSheet.create({
