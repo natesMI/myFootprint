@@ -13,12 +13,18 @@ const styles = StyleSheet.create({
   discover: {
     marginTop: 45,
     flex: 1,
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#27AE60',
+    backgroundColor: '#2ECC71',
   },
   listEntry: {
     padding: 10,
+    borderBottomWidth: 1,
+    borderTopWidth: 1,
+    flex: 1,
+    width: 400,
+    height: 100,
   },
 });
 
