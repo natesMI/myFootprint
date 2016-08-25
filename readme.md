@@ -11,7 +11,7 @@
  - What am I missing out on?
 
 <div>
-  <img src="./assets/screenshot_1.png" alt="Screenshot1" width="30%" />
+  <img src="./assets/screenshot_1.png" alt="Screenshot1" width="20%" />
 </div>
 
 #### Tools Used

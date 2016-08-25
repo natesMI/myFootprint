@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Actions } from 'react-native-router-flux'
+import { Actions } from 'react-native-router-flux';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 import {
 	View,
 	Text,
 	StyleSheet,
 	Navigator,
-	TouchableHighlight
+	TouchableHighlight,
+	Image,
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -16,6 +19,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#3498DB',
+  },
+  backgroundImage: {
+  	width: 350,
   },
 });
 
@@ -27,6 +33,10 @@ class Landing extends React.Component{
           <TouchableHighlight onPress={() => { Actions.shell() }}>
 				    <Text>Click here to sign-in</Text>
 				  </TouchableHighlight>
+				  <Image 
+				    style={styles.backgroundImage}
+				    source={require('')} 
+				  />
         </View>
 			);
 	}
